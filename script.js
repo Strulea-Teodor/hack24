@@ -556,8 +556,12 @@ setInterval(createSnowflake, 200);
             if (correct) {
                 location.reload(true);
             } else {
-                alert("Oh no! I'll try to do better next time! 😊");
-            }
+                document.getElementById('winner-section').style.display = 'block';
+                document.getElementById('result-section').style.display = 'none'; 
+                if(correct){
+                    location.reload(true);
+                }
+    }
             startGame();
         }
 

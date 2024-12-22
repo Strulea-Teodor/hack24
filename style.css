@@ -197,3 +197,39 @@ button {
     color: #64748b;
     font-size: 1rem;
 }
+
+#win-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f9f9f9;
+    /* Optional background color */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#win-page h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#winner-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+}
+
+#winner-section {
+    display: none;
+}
