@@ -556,10 +556,8 @@ setInterval(createSnowflake, 200);
         // Handle end game
         function handleEndGame(correct) {
             if (correct) {
-                if (document.getElementById('winner-section').style.display === 'block') {
-                    location.reload(true);
-                    return;
-                }
+                location.reload(true);
+                return;
             }
             document.getElementById('question-section').style.display = 'none';
             document.getElementById('result-section').style.display = 'none';
