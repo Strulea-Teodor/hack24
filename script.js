@@ -488,7 +488,9 @@ setInterval(createSnowflake, 200);
         function startGame() {
             document.getElementById('home-page').style.display = 'none';
             document.getElementById('game-page').style.display = 'block';
+            document.getElementById('question-section').style.display = 'block';
             document.getElementById('result-section').style.display = 'none';
+            document.getElementById('winner-section').style.display = 'none';
 
             // Reset game state
             currentQuestionIndex = 0;
@@ -529,10 +531,9 @@ setInterval(createSnowflake, 200);
         // Handle answer
         function handleAnswer(answer) {
             if (!currentQuestion) return;
-
+            document.getElementById('winner-section').style.display = 'none';
             askedQuestions.push(`${currentQuestion.category}-${currentQuestion.id}`);
             updateScores(currentQuestion, answer);
-
             updateKikiState();
             showNextQuestion();
         }
@@ -542,6 +543,7 @@ setInterval(createSnowflake, 200);
             const bestGuess = getBestGuess();
 
             document.getElementById('question-section').style.display = 'none';
+            document.getElementById('winner-section').style.display = 'none';
             document.getElementById('result-section').style.display = 'block';
 
             if (bestGuess) {
@@ -558,14 +560,10 @@ setInterval(createSnowflake, 200);
                     location.reload(true);
                     return;
                 }
-                document.getElementById('question-section').style.display = 'none';
-                document.getElementById('winner-section').style.display = 'block';
-                document.getElementById('result-section').style.display = 'none';
-            } else {
-                document.getElementById('question-section').style.display = 'none';
-                document.getElementById('winner-section').style.display = 'block';
-                document.getElementById('result-section').style.display = 'none';
             }
+            document.getElementById('question-section').style.display = 'none';
+            document.getElementById('result-section').style.display = 'none';
+            document.getElementById('winner-section').style.display = 'block';
         }
 
         // KIKI STATES

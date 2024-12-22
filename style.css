@@ -231,10 +231,13 @@ button {
 }
 
 #winner-section {
-    display: none;
     width: 100%;
     text-align: center;
     margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #winner-section h1 {
@@ -249,6 +252,15 @@ button {
     margin-top: 15px;
 }
 
+#game-page {
+    position: relative;
+    width: 100%;
+}
+
 #game-page > div {
     width: 100%;
+}
+
+.hidden {
+    display: none !important;
 }
