@@ -407,6 +407,7 @@ setInterval(createSnowflake, 200);
         let askedQuestions = [];
         let scores = {};
         let confidence = 0;
+        let currentQuestion = null;
 
         // Initialize game data
         async function initializeGame() {
@@ -493,12 +494,15 @@ setInterval(createSnowflake, 200);
             currentQuestionIndex = 0;
             askedQuestions = [];
             scores = {};
+            confidence = 0;
             persons.forEach(person => {
                 scores[person.id] = 0;
             });
 
             showNextQuestion();
         }
+
+        const questionImages = ['1Kiki.png', '2Kiki.png', '3Kiki.png'];
 
         // Show the next question
         function showNextQuestion() {
@@ -508,6 +512,15 @@ setInterval(createSnowflake, 200);
                 showResult();
                 return;
             }
+
+            let bubbleImage = document.getElementById('bubble-img');
+            if (!bubbleImage) {
+                bubbleImage = document.createElement('img');
+                bubbleImage.id = 'bubble-img';
+                document.getElementById('question-bubble')
+                    .insertBefore(bubbleImage, document.getElementById('question-text'));
+            }
+            bubbleImage.src = questionImages[Math.floor(Math.random() * questionImages.length)];
 
             document.getElementById('question-text').textContent = question.text;
             currentQuestion = question;
@@ -520,10 +533,7 @@ setInterval(createSnowflake, 200);
             askedQuestions.push(`${currentQuestion.category}-${currentQuestion.id}`);
             updateScores(currentQuestion, answer);
 
-            // Update confidence based on number of questions asked
-            confidence = Math.min(100, (askedQuestions.length / 10) * 100);
-            document.getElementById('confidence-value').textContent = `${Math.round(confidence)}%`;
-
+            updateKikiState();
             showNextQuestion();
         }
 
@@ -544,7 +554,7 @@ setInterval(createSnowflake, 200);
         // Handle end game
         function handleEndGame(correct) {
             if (correct) {
-                alert("Yay! I guessed correctly! 🎉");
+                location.reload(true);
             } else {
                 alert("Oh no! I'll try to do better next time! 😊");
             }
@@ -553,10 +563,10 @@ setInterval(createSnowflake, 200);
 
         // KIKI STATES
         const KIKI_STATES = {
-            welcoming: { emoji: "1.webp" },
-            confused: { emoji: "4.webp" },
-            thinking: { emoji: "2.webp" },
-            confident: { emoji: "3.webp" }
+            welcoming: { emoji: "1Kiki.png" },
+            confused: { emoji: "2Kiki.png" },
+            thinking: { emoji: "3Kiki.png" },
+            confident: { emoji: "4Kiki.png" }
         };
 
         function updateKikiState() {
