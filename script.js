@@ -554,15 +554,18 @@ setInterval(createSnowflake, 200);
         // Handle end game
         function handleEndGame(correct) {
             if (correct) {
-                location.reload(true);
-            } else {
-                document.getElementById('winner-section').style.display = 'block';
-                document.getElementById('result-section').style.display = 'none'; 
-                if(correct){
+                if (document.getElementById('winner-section').style.display === 'block') {
                     location.reload(true);
+                    return;
                 }
-    }
-            startGame();
+                document.getElementById('question-section').style.display = 'none';
+                document.getElementById('winner-section').style.display = 'block';
+                document.getElementById('result-section').style.display = 'none';
+            } else {
+                document.getElementById('question-section').style.display = 'none';
+                document.getElementById('winner-section').style.display = 'block';
+                document.getElementById('result-section').style.display = 'none';
+            }
         }
 
         // KIKI STATES

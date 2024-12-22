@@ -232,4 +232,23 @@ button {
 
 #winner-section {
     display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#winner-section h1 {
+    margin-bottom: 15px;
+}
+
+#winner-section input {
+    margin: 15px auto;
+}
+
+#winner-section button {
+    margin-top: 15px;
+}
+
+#game-page > div {
+    width: 100%;
 }
