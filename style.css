@@ -167,14 +167,24 @@ button {
 
 #result-section {
     display: none;
+    text-align: center;
+    width: 100%;
 }
 
 .guess-container {
-    background: rgba(255, 255, 255, 1);;
+    background: rgba(255, 255, 255, 1);
     padding: 20px;
     border-radius: 15px;
-    margin: 20px 0;
+    margin: 20px auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    min-width: 200px;
+}
+
+#result-section .bubble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .guess-name {
