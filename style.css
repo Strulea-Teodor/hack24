@@ -26,6 +26,20 @@ body {
     position: relative;
 }
 
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    animation: fall linear forwards;
+}
+ 
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

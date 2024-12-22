@@ -6,30 +6,22 @@ let questions = {
                 "weight": 1.0
             },
             "2": {
-                "text": "Is this person related to programming?",
-                "weight": 1.0
-            },
-            "3": {
                 "text": "Is this person involved in student organizations?",
                 "weight": 0.8
             },
-            "4": {
+            "3": {
                 "text": "Is your character female?",
                 "weight": 1.0
             },
-            "5": {
+            "4": {
                 "text": "Is your character male?",
                 "weight": 1.0
             },
-            "6": {
-                "text": "Is your character a teacher?",
-                "weight": 1.0
-            },
-            "7": {
+            "5": {
                 "text": "Is your character a mentor?",
                 "weight": 1.0
             },
-            "8": {
+            "6": {
                 "text": "Is your character a student?",
                 "weight": 1.0
             }
@@ -44,7 +36,7 @@ let questions = {
                 "weight": 1.0
             },
             "3": {
-                "text": "Does your character teach seminars?",
+                "text": "Does your character hold seminars?",
                 "weight": 1.0
             },
             "4": {
@@ -52,46 +44,42 @@ let questions = {
                 "weight": 1.0
             },
             "5": {
-                "text": "Is your character frequently seen around the library or research labs?",
-                "weight": 1.0
-            },
-            "6": {
                 "text": "Does your character hold lectures?",
                 "weight": 1.0
             },
-            "7": {
+            "6": {
                 "text": "Is your character associated with programming?",
                 "weight": 1.0
             },
-            "8": {
+            "7": {
                 "text": "Is your character professional?",
                 "weight": 1.0
             },
-            "9": {
+            "8": {
                 "text": "Is this professor a popular choice for graduation speeches?",
                 "weight": 1.0
             },
-            "10": {
+            "9": {
                 "text": "Is your character the dean of a faculty?",
                 "weight": 1.0
             },
-            "11": {
+            "10": {
                 "text": "Is your character known for wearing colorful outfits?",
                 "weight": 1.0
             },
-            "12": {
+            "11": {
                 "text": "Does your character often come late to classes?",
                 "weight": 1.0
             },
-            "13": {
+            "12": {
                 "text": "Is your character associated with gambling?",
                 "weight": 1.0
             },
-            "14": {
+            "13": {
                 "text": "Is your character known for excelling in academics?",
                 "weight": 1.0
             },
-            "15": {
+            "14": {
                 "text": "Does your character organize school events?",
                 "weight": 1.0
             }
@@ -102,7 +90,7 @@ let questions = {
                 "weight": 1.0
             },
             "2": {
-                "text": "Does your character always arrive on time to classes?",
+                "text": "Is your character someone well respected?",
                 "weight": 1.0
             },
             "3": {
@@ -114,27 +102,27 @@ let questions = {
                 "weight": 1.0
             },
             "5": {
-                "text": "Does your character prefer working in their office rather than from home?",
+                "text": "Is your character frequently seen around the library or research labs?",
                 "weight": 1.0
             },
             "6": {
-                "text": "Is your character often seen at the cafeteria?",
+                "text": "Does your character prefer working in their office rather than from home?",
                 "weight": 1.0
             },
             "7": {
-                "text": "Does your character prefer email communication over face-to-face meetings?",
+                "text": "Is your character often seen at the cafeteria?",
                 "weight": 1.0
             },
             "8": {
-                "text": "Has your character ever been seen taking long walks around campus?",
+                "text": "Does your character prefer email communication over face-to-face meetings?",
                 "weight": 1.0
             },
             "9": {
-                "text": "Does your character attend campus sports events?",
+                "text": "Has your character ever been seen taking long walks around campus?",
                 "weight": 1.0
             },
             "10": {
-                "text": "Does your character own a pet?",
+                "text": "Does your character attend campus sports events?",
                 "weight": 1.0
             }
         }
@@ -148,28 +136,62 @@ let persons = [
         "name": "Elena Gogoi",
         "role": "Professor",
         "department": "English Language",
-        "image_url": "/static/images/john_smith.jpg",
         "answers": {
             "general": {
-                "1": { "score": 1, "weight": 1.0 },
-                "2": { "score": -1, "weight": 1.0 },
-                "3": { "score": 0, "weight": 1.0 }
+                "1": { "score": 100, "weight": 1.0 },
+                "2": { "score": 0, "weight": 1.0 },
+                "3": { "score": 100, "weight": 1.0 },
+                "4": { "score": 0, "weight": 1.0 },
+                "5": { "score": 0, "weight": 1.0 },
+                "6": { "score": 0, "weight": 1.0 }
+            },
+            "specific": {
+                "1": { "score": 0 },
+                "2": { "score": 0 },
+                "3": { "score": 0 },
+                "4": { "score": 0 },
+                "5": { "score": 1 },
+                "6": { "score": 0 },
+                "7": { "score": 10 },
+                "8": { "score": 0 },
+                "9": { "score": 0 },
+                "10": { "score": 1 },
+                "11": { "score": 0 },
+                "12": { "score": 0 },
+                "13": { "score": 0 },
+                "14": { "score": 0 }
             }
         }
     },
     {
         "id": "2",
         "name": "Viorel Bostan",
-        "role": "Professor",
-        "department": "",
-        "image_url": "/static/images/example_professor.jpg",
+        "role": "Professor \ Rector",
+        "department": "Mathematics",
         "answers": {
             "general": {
-                "1": { "score": 1, "weight": 1.0 },
+                "1": { "score": 100, "weight": 1.0 },
                 "2": { "score": 1, "weight": 1.0 },
-                "3": { "score": 1, "weight": 1.0 },
-                "4": { "score": 0, "weight": 1.0 },
-                "5": { "score": 1, "weight": 1.0 }
+                "3": { "score": 0, "weight": 1.0 },
+                "4": { "score": 100, "weight": 1.0 },
+                "5": { "score": 0, "weight": 1.0 },
+                "6": { "score": 0, "weight": 1.0 }
+            },
+            "specific": {
+                "1": { "score": 0 },
+                "2": { "score": 1 },
+                "3": { "score": 0 },
+                "4": { "score": 10 },
+                "5": { "score": 1 },
+                "6": { "score": 0 },
+                "7": { "score": 1 },
+                "8": { "score": 1 },
+                "9": { "score": 0 },
+                "10": { "score": 0 },
+                "11": { "score": 0 },
+                "12": { "score": 1 },
+                "13": { "score": 1 },
+                "14": { "score": 1 }
             }
         }
     },
@@ -177,15 +199,31 @@ let persons = [
         "id": "3",
         "name": "Teodor Strulea",
         "role": "Student",
-        "department": "Student Council",
-        "image_url": "/static/images/student_representative.jpg",
+        "department": "FAF Students",
         "answers": {
             "general": {
                 "1": { "score": 0, "weight": 1.0 },
                 "2": { "score": 1, "weight": 1.0 },
-                "3": { "score": 1, "weight": 1.0 },
-                "4": { "score": 1, "weight": 1.0 },
-                "5": { "score": 0, "weight": 1.0 }
+                "3": { "score": 0, "weight": 1.0 },
+                "4": { "score": 100, "weight": 1.0 },
+                "5": { "score": 0, "weight": 1.0 },
+                "6": { "score": 100, "weight": 1.0 }
+            },
+            "specific": {
+                "1": { "score": 0 },
+                "2": { "score": 1 },
+                "3": { "score": 0 },
+                "4": { "score": 0 },
+                "5": { "score": 0 },
+                "6": { "score": 0 },
+                "7": { "score": 0 },
+                "8": { "score": 0 },
+                "9": { "score": 0 },
+                "10": { "score": 1 },
+                "11": { "score": 0 },
+                "12": { "score": 1 },
+                "13": { "score": 1 },
+                "14": { "score": 0 }
             }
         }
     },
@@ -194,43 +232,30 @@ let persons = [
         "name": "Cristofor Fistic",
         "role": "Professor",
         "department": "Mathematics",
-        "image_url": "/static/images/viorel_bostan.jpg",
         "answers": {
             "general": {
-                "1": { "score": 0, "weight": 1.0 },
-                "2": { "score": 100, "weight": 1.0 },
-                "3": { "score": 100, "weight": 1.0 },
-                "4": { "score": 0, "weight": 1.0 },
-                "5": { "score": 0, "weight": 1.0 }
+                "1": { "score": 100, "weight": 1.0 },
+                "2": { "score": 0, "weight": 1.0 },
+                "3": { "score": 0, "weight": 1.0 },
+                "4": { "score": 100, "weight": 1.0 },
+                "5": { "score": 100, "weight": 1.0 },
+                "6": { "score": 0, "weight": 1.0 }
             },
             "specific": {
                 "1": { "score": 0 },
                 "2": { "score": 1 },
-                "3": { "score": 0 },
-                "4": { "score": 10 },
+                "3": { "score": 1 },
+                "4": { "score": 0 },
                 "5": { "score": 0 },
                 "6": { "score": 1 },
                 "7": { "score": 0 },
-                "8": { "score": 1 },
-                "9": { "score": 1 },
-                "10": { "score": 1 },
-                "11": { "score": 0 },
-                "12": { "score": 0 },
-                "13": { "score": 0 },
-                "14": { "score": 1 },
-                "15": { "score": 0 }
-            },
-            "pointless": {
-                "1": { "score": 1 },
-                "2": { "score": 1 },
-                "3": { "score": 1 },
-                "4": { "score": 1 },
-                "5": { "score": 1 },
-                "6": { "score": 0 },
-                "7": { "score": 1 },
                 "8": { "score": 0 },
                 "9": { "score": 0 },
-                "10": { "score": 0 }
+                "10": { "score": 0 },
+                "11": { "score": 10 },
+                "12": { "score": 1 },
+                "13": { "score": 1 },
+                "14": { "score": 1 }
             }
         }
     },
@@ -239,43 +264,30 @@ let persons = [
         "name": "Mihai Gaidau",
         "role": "Professor",
         "department": "Computer Science",
-        "image_url": "",
         "answers": {
             "general": {
-                "1": { "score": 1, "weight": 1.0 },
+                "1": { "score": 100, "weight": 1.0 },
                 "2": { "score": 0, "weight": 1.0 },
-                "3": { "score": 1, "weight": 1.0 },
-                "4": { "score": 1, "weight": 1.0 },
-                "5": { "score": 0, "weight": 1.0 }
+                "3": { "score": 0, "weight": 1.0 },
+                "4": { "score": 100, "weight": 1.0 },
+                "5": { "score": 100, "weight": 1.0 },
+                "6": { "score": 0, "weight": 1.0 }
             },
             "specific": {
                 "1": { "score": 0 },
                 "2": { "score": 0 },
                 "3": { "score": 1 },
                 "4": { "score": 0 },
-                "5": { "score": 1 },
+                "5": { "score": 0 },
                 "6": { "score": 1 },
-                "7": { "score": 1 },
-                "8": { "score": 1 },
+                "7": { "score": 0 },
+                "8": { "score": 0 },
                 "9": { "score": 0 },
                 "10": { "score": 0 },
                 "11": { "score": 1 },
                 "12": { "score": 0 },
                 "13": { "score": 0 },
-                "14": { "score": 1 },
-                "15": { "score": 1 }
-            },
-            "pointless": {
-                "1": { "score": 0 },
-                "2": { "score": 1 },
-                "3": { "score": 1 },
-                "4": { "score": 1 },
-                "5": { "score": 0 },
-                "6": { "score": 1 },
-                "7": { "score": 0 },
-                "8": { "score": 1 },
-                "9": { "score": 1 },
-                "10": { "score": 1 }
+                "14": { "score": 0 }
             }
         }
     },
@@ -284,43 +296,30 @@ let persons = [
         "name": "Elena Cojuhari",
         "role": "Professor",
         "department": "Mathematics",
-        "image_url": "",
         "answers": {
             "general": {
-                "1": { "score": 0, "weight": 1.0 },
-                "2": { "score": 1, "weight": 1.0 },
-                "3": { "score": 1, "weight": 1.0 },
+                "1": { "score": 100, "weight": 1.0 },
+                "2": { "score": 0, "weight": 1.0 },
+                "3": { "score": 100, "weight": 1.0 },
                 "4": { "score": 0, "weight": 1.0 },
-                "5": { "score": 0, "weight": 1.0 }
+                "5": { "score": 0, "weight": 1.0 },
+                "6": { "score": 0, "weight": 1.0 }
             },
             "specific": {
-                "1": { "score": 1 },
-                "2": { "score": 0 },
-                "3": { "score": 0 },
+                "1": { "score": 0 },
+                "2": { "score": 1 },
+                "3": { "score": 1 },
                 "4": { "score": 0 },
                 "5": { "score": 1 },
-                "6": { "score": 1 },
+                "6": { "score": 0 },
                 "7": { "score": 1 },
                 "8": { "score": 0 },
                 "9": { "score": 0 },
-                "10": { "score": 0 },
+                "10": { "score": 10 },
                 "11": { "score": 0 },
-                "12": { "score": 1 },
-                "13": { "score": 1 },
-                "14": { "score": 0 },
-                "15": { "score": 0 }
-            },
-            "pointless": {
-                "1": { "score": 0 },
-                "2": { "score": 0 },
-                "3": { "score": 0 },
-                "4": { "score": 1 },
-                "5": { "score": 0 },
-                "6": { "score": 1 },
-                "7": { "score": 1 },
-                "8": { "score": 0 },
-                "9": { "score": 1 },
-                "10": { "score": 0 }
+                "12": { "score": 0 },
+                "13": { "score": 0 },
+                "14": { "score": 0 }
             }
         }
     },
@@ -329,48 +328,80 @@ let persons = [
         "name": "Ernest Bitca",
         "role": "Professor",
         "department": "Computer Science",
-        "image_url": "",
         "answers": {
             "general": {
-                "1": { "score": 1, "weight": 1.0 },
+                "1": { "score": 100, "weight": 1.0 },
                 "2": { "score": 0, "weight": 1.0 },
                 "3": { "score": 0, "weight": 1.0 },
-                "4": { "score": 0, "weight": 1.0 },
-                "5": { "score": 1, "weight": 1.0 }
+                "4": { "score": 100, "weight": 1.0 },
+                "5": { "score": 0, "weight": 1.0 },
+                "6": { "score": 0, "weight": 1.0 }
             },
             "specific": {
-                "1": { "score": 1 },
-                "2": { "score": 1 },
-                "3": { "score": 0 },
-                "4": { "score": 0 },
-                "5": { "score": 1 },
-                "6": { "score": 0 },
-                "7": { "score": 1 },
-                "8": { "score": 1 },
-                "9": { "score": 0 },
-                "10": { "score": 0 },
-                "11": { "score": 1 },
-                "12": { "score": 0 },
-                "13": { "score": 0 },
-                "14": { "score": 1 },
-                "15": { "score": 1 }
-            },
-            "pointless": {
-                "1": { "score": 0 },
-                "2": { "score": 1 },
+                "1": { "score": 10 },
+                "2": { "score": 0 },
                 "3": { "score": 1 },
                 "4": { "score": 0 },
                 "5": { "score": 1 },
-                "6": { "score": 0 },
+                "6": { "score": 1 },
+                "7": { "score": 1 },
+                "8": { "score": 0 },
+                "9": { "score": 0 },
+                "10": { "score": 0 },
+                "11": { "score": 0 },
+                "12": { "score": 0 },
+                "13": { "score": 0 },
+                "14": { "score": 1 }
+            }
+        }
+    },
+    {
+        "id": "8",
+        "name": "Dumitru Ciorba",
+        "role": "Dean",
+        "department": "Computer Science",
+        "answers": {
+            "general": {
+                "1": { "score": 0, "weight": 1.0 },
+                "2": { "score": 0, "weight": 1.0 },
+                "3": { "score": 0, "weight": 1.0 },
+                "4": { "score": 100, "weight": 1.0 },
+                "5": { "score": 0, "weight": 1.0 },
+                "6": { "score": 0, "weight": 1.0 }
+            },
+            "specific": {
+                "1": { "score": 0 },
+                "2": { "score": 0 },
+                "3": { "score": 0 },
+                "4": { "score": 0 },
+                "5": { "score": 0 },
+                "6": { "score": 1 },
                 "7": { "score": 1 },
                 "8": { "score": 1 },
-                "9": { "score": 0 },
-                "10": { "score": 1 }
+                "9": { "score": 1000 },
+                "10": { "score": 0 },
+                "11": { "score": 0 },
+                "12": { "score": 0 },
+                "13": { "score": 0 },
+                "14": { "score": 0 }
             }
         }
     }
 ];
 
+function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.innerHTML = '❄';
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+        document.body.appendChild(snowflake);
+        snowflake.addEventListener('animationend', () => {
+                snowflake.remove();
+    });
+}
+
+setInterval(createSnowflake, 200);
 // Game state
         let currentQuestionIndex = 0;
         let askedQuestions = [];
